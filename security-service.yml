@@ -1,0 +1,55 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: security-service
+  cloud:
+    config:
+      enabled: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
+          jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: ':::::::::::: Hikari DS Spades_1-MS POOL ::::::::::::'
+      connection-timeout: 60000
+      maximum-pool-size: 30
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/securitykeycloak
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update # When you launch the application for the first time - switch "none" at "create"
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+email:
+  url: http://gateway-service:9090/api/mail
+
+keycloak:
+  server-url: "https://keycloak.fethi.synology.me/auth"
+  realm: "KeyClock-INSY2S-PROCESS"
+  client-id: "InsyProcess"
+  client-secret: "BiheCUr1fBEZfNl1opHK5EP9Bwa5Dq3L"
+  admin-username: "insy2s"
+  admin-password: "insy2s"
+
+eureka:
+  instance:
+    hostname: security-service
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
