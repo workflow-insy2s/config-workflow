@@ -20,12 +20,12 @@ spring:
       connection-timeout: 60000
       maximum-pool-size: 30
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgres:5432/securitykeycloak
+    url: jdbc:postgresql://postgres:5432/securitykeycloaksxcscs
     username: postgres
     password: admin
   jpa:
     hibernate:
-      ddl-auto: update # When you launch the application for the first time - switch "none" at "create"
+      ddl-auto: create # When you launch the application for the first time - switch "none" at "create"
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: false
