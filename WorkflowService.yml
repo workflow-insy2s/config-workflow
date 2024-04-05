@@ -12,10 +12,16 @@ server:
 spring:
   application:
     name: WorkflowService
+  security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
+            jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
   datasource:
-    url: jdbc:postgresql://localhost:5432/insy2s
+    url: jdbc:postgresql://localhost:5432/WorkflowV1
     username: postgres
-    password: proxym2023
+    password: admin
   jpa:
     show-sql: true
     hibernate:
