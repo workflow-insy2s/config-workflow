@@ -1,7 +1,10 @@
 spring:
-  application:
-    name: RuleService
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
+          jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/MoteurDeRegleV7
@@ -24,9 +27,3 @@ management:
 
 server:
   port: 7081
-security:
-  oauth2:
-    resourceserver:
-      jwt:
-        issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
-        jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
