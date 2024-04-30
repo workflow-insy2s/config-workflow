@@ -16,8 +16,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
-          jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
+          issuer-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess
+          jwk-set-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess/protocol/openid-connect/certs
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
@@ -43,9 +43,9 @@ email:
   url: http://localhost:9090/api/mail
 
 keycloak:
-  server-url: "https://keycloak.fethi.synology.me/auth"
-  realm: "KeyClock-INSY2S-PROCESS"
-  client-id: "InsyProcess"
-  client-secret: "BiheCUr1fBEZfNl1opHK5EP9Bwa5Dq3L"
+  server-url: "https://keycloak.insycs.fr/"
+  realm: "KeyClock-InsyProcess"
+  client-id: "KeyClock-InsyProcess-Client"
+  client-secret: "IiOfARfODI8X6y2ChpC0Zk3Gu0f5CNMm"
   admin-username: "insy2s"
   admin-password: "insy2s"
