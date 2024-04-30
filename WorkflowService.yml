@@ -16,8 +16,8 @@ spring:
       oauth2:
         resourceserver:
           jwt:
-            issuer-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS
-            jwk-set-uri: https://keycloak.fethi.synology.me/auth/realms/KeyClock-INSY2S-PROCESS/protocol/openid-connect/certs
+           issuer-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess
+          jwk-set-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess/protocol/openid-connect/certs
   datasource:
     url: jdbc:postgresql://localhost:5432/WorkflowV1
     username: postgres
