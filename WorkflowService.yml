@@ -19,7 +19,7 @@ spring:
            issuer-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess
           jwk-set-uri: https://keycloak.insycs.fr/realms/KeyClock-InsyProcess/protocol/openid-connect/certs
   datasource:
-    url: jdbc:postgresql://localhost:5432/WorkflowV1
+    url: jdbc:postgresql://localhost:5432/WorkflowV2
     username: postgres
     password: admin
   jpa:
